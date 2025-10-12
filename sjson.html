@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Structured JSON (.sJson) • AionScript</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://aionscript.com" rel="canonical"/>
+<meta content="Transform flat data into living, self‑describing structures that empower AI models to reason contextually." name="description"/><meta content="Structured JSON (.sJson) • AionScript" property="og:title"/><meta content="Smarter JSON for AI ecosystems." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Structured JSON (.sJson)", "url": "https://aionscript.com/sjson.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
+<!-- Navigation -->
+<nav class="navbar">
+<div class="nav-container">
+<div class="nav-brand">
+<a class="nav-brand-link" href="index.html">
+<span class="nav-logo-brace" style="color: #76C5F0;">{</span>
+<span class="footer-logo-a" style="color: #E8EAED;">A</span>
+<span class="nav-logo-brace" style="color: #76C5F0;">}</span>
+<span class="nav-logo-text" style="color: #E8EAED;">AionScript™</span>
+</a>
+</div>
+<div class="nav-menu">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="aion.html">.aion</a>
+<a class="nav-link" href="sjson.html">.sJson</a>
+<a class="nav-link" href="history.html">About</a>
+<a class="nav-link" href="adoption.html">Adoption</a>
+<a class="nav-link" href="roadmap.html">Roadmap</a>
+<a class="nav-link" href="press.html">Press</a>
+</div>
+<div class="nav-actions">
+<a aria-label="GitHub" class="btn btn-secondary" href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 19c-5 1.5-5-2.5-7-3
+                     m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
+                     c3.14-.35 6.44-1.54 6.44-7
+                     A5.44 5.44 0 0 0 20 4.77
+                     5.07 5.07 0 0 0 19.91 1
+                     S18.73.65 16 2.48
+                     a13.38 13.38 0 0 0-7 0
+                     C6.27.65 5.09 1 5.09 1
+                     A5.07 5.07 0 0 0 5 4.77
+                     a5.44 5.44 0 0 0-1.5 3.78
+                     c0 5.42 3.3 6.61 6.44 7
+                     A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+</a>
+<a class="btn btn-primary" href="docs.html">Docs</a>
+</div>
+<!-- Mobile Toggle + Overlay -->
+<button aria-expanded="false" aria-label="Open menu" class="nav-toggle">☰</button>
+<div aria-hidden="true" class="nav-overlay">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="aion.html">.aion</a>
+<a class="nav-link" href="sjson.html">.sJson</a>
+<a class="nav-link" href="history.html">About</a>
+<a class="nav-link" href="adoption.html">Adoption</a>
+<a class="nav-link" href="roadmap.html">Roadmap</a>
+<a class="nav-link" href="press.html">Press</a>
+<a class="nav-link" href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">GitHub</a>
+<a class="nav-link" href="docs.html">Docs</a>
+</div>
+</div>
+</nav>
+<main>
+<section class="hero hero--mini"><div class="hero-content">
+<h1 class="hero-title">Structured JSON (.sJson)</h1>
+<p class="hero-subtitle">Canonical, machine‑ready JSON enriched with Aion’s semantics.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="docs.html">Specification</a>
+<a class="btn btn-secondary" href="adoption.html">Adopt the Standard</a>
+</div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>GitHub HTML → sJson</h2>
+<p>Examples of extracting HTML from GitHub and shaping it into sJson for AI ingestion.</p>
+<h3>HtmlDocument + Chunks</h3>
+<pre class="code">{
+  "@spec": "https://aionscript.com/specs/sjson/0.1",
+  "@type": "HtmlDocument",
+  "@id": "gh:acme/widgets/docs/index.html@a1b2c3d",
+  "@context": "https://aionscript.com/contexts/web-doc",
+  "repo": { "host": "github", "org": "acme", "repo": "widgets", "sha": "a1b2c3d" },
+  "path": "docs/index.html",
+  "title": "Widgets — Quickstart",
+  "language": "en",
+  "@source": "https://github.com/acme/widgets/blob/a1b2c3d/docs/index.html",
+  "@timestamp": "2025-01-12T15:30:21Z",
+  "@confidence": 0.99,
+  "links": [
+    { "href": "#install", "rel": "section" },
+    { "href": "https://example.com/api", "rel": "external" }
+  ],
+  "headings": [
+    { "level": 1, "text": "Widgets — Quickstart" },
+    { "level": 2, "text": "Install" },
+    { "level": 2, "text": "Usage" }
+  ],
+  "chunks": [
+    {
+      "@type": "DocumentChunk",
+      "@id": "gh:acme/widgets/docs/index.html@a1b2c3d#1",
+      "section": "Install",
+      "text": "Install Widgets with npm install @acme/widgets. Import and initialize in your app entrypoint…",
+      "tokens_est": 48,
+      "@embedding_model": "text-embedding-3-large",
+      "@embedding_dim": 3072,
+      "@embedding": [0.12, -0.03, 0.41],
+      "@source": "https://github.com/acme/widgets/blob/a1b2c3d/docs/index.html#L22"
+    },
+    {
+      "@type": "DocumentChunk",
+      "@id": "gh:acme/widgets/docs/index.html@a1b2c3d#2",
+      "section": "Usage",
+      "code_language": "html",
+      "code": "&lt;div id=\"widget\"&gt;&lt;/div&gt;&lt;script&gt;Widgets.init('#widget')&lt;/script&gt;",
+      "text": "Mount the widget container, then initialize via Widgets.init(…) to render.",
+      "tokens_est": 62,
+      "@embedding_model": "text-embedding-3-large",
+      "@embedding_dim": 3072,
+      "@embedding": [0.28, 0.07, -0.15],
+      "@source": "https://github.com/acme/widgets/blob/a1b2c3d/docs/index.html#L48"
+    }
+  ]
+}</pre>
+<h3>HtmlSnippet (focused extraction)</h3>
+<pre class="code">{
+  "@spec": "https://aionscript.com/specs/sjson/0.1",
+  "@type": "HtmlSnippet",
+  "@id": "gh:foo/bar/site/index.html@9f8e7d#hero",
+  "@context": "https://aionscript.com/contexts/web-doc",
+  "@source": "https://github.com/foo/bar/blob/9f8e7d/site/index.html#L1-L40",
+  "@timestamp": "2025-01-12T15:32:10Z",
+  "@confidence": 0.97,
+  "selector": "section.hero",
+  "html": "&lt;section class=\"hero\"&gt;&lt;h1&gt;Bar&lt;/h1&gt;&lt;p&gt;Fast web components…&lt;/p&gt;&lt;/section&gt;",
+  "text": "Bar — Fast web components…",
+  "headings": [{ "level": 1, "text": "Bar" }],
+  "links": [],
+  "@embedding_model": "text-embedding-3-large",
+  "@embedding_dim": 3072,
+  "@embedding": [0.05, -0.22, 0.64],
+  "@transform": "html_to_text(v1)"
+}</pre>
+<h3>Tips</h3>
+<ul>
+<li>Include commit SHA in <code>@source</code> for immutable references.</li>
+<li>Chunk to ~200–800 tokens; include section/title for stronger retrieval.</li>
+<li>Set <code>code_language</code> for code blocks; keep both code and summary text.</li>
+<li>Ship <code>@embedding_model</code> and <code>@embedding_dim</code> with vectors; omit vectors if you store them separately.</li>
+<li>Add <code>@license</code> if you propagate content; respect repository licenses.</li>
+</ul>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Structured JSON (sJson) Spec v0.1 (Draft)</h2>
+<p>File extension: <code>.sjson</code> · Proposed media type: <code>application/vnd.aionscript.sjson+json</code> (subject to registration)</p>
+<h3>Required fields</h3>
+<ul>
+<li><code>@type</code> — string — logical type or class</li>
+<li><code>@id</code> — string | URI — unique identifier</li>
+<li><code>@context</code> — URI | object — domain ontology or schema reference</li>
+</ul>
+<h3>Optional semantic fields</h3>
+<ul>
+<li><code>@source</code> — URI | string — where the data came from</li>
+<li><code>@link</code> — array of URIs or IDs — related objects</li>
+<li><code>@confidence</code> — number (0–1) — trust / certainty</li>
+<li><code>@embedding</code> — array[number] — vector meaning</li>
+<li><code>@timestamp</code> — ISO string — when captured</li>
+<li><code>@transform</code> — code string — optional transformation rule</li>
+</ul>
+<h3>Example</h3>
+<pre class="code">{
+  "@type": "UtilityClass",
+  "@id": "bg-mint-500",
+  "@context": "https://aion.dev/tailwind",
+  "description": "Applies mint background color",
+  "css": "background-color: var(--color-mint-500);",
+  "@embedding": [0.21, -0.34, 0.89],
+  "@confidence": 0.98,
+  "@source": "github://tailwindlabs/tailwindcss/src/plugins/backgroundColor.js",
+  "@link": ["bg-green-500", "bg-teal-500"]
+}</pre>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Embedded Knowledge</h2>
+<p>Store embeddings inside .sJson to unify structure and semantics.</p>
+<pre class="code">{
+  "@type": "DocumentChunk",
+  "text": "Tailwind’s dark mode now uses @custom-variant",
+  "@embedding": [0.02, -0.33, 0.81],
+  "@source": "tailwindcss.com/docs/dark-mode"
+}</pre>
+<p>This enables similarity search without managing a separate vector database.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Universal Meta Layer</h2>
+<p>Use a small, consistent meta-layer so any source can map into .sJson:</p>
+<ul>
+<li><code>@type</code> — kind of object</li>
+<li><code>@context</code> — domain ontology (optional)</li>
+<li><code>@source</code> — original datasource</li>
+<li><code>@link</code> — related objects</li>
+<li><code>@confidence</code> — certainty or trust level</li>
+<li><code>@embedding</code> — vector representation (optional)</li>
+<li><code>@timestamp</code> — capture time</li>
+<li><code>@transform</code> — recompute/update rules</li>
+</ul>
+<p>Adapters that emit these fields create a truly portable smart object format.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Why AI Models Love It</h2>
+<ul>
+<li>Consistent cross‑source semantics</li>
+<li>Self‑contained context and units</li>
+<li>Embeddings where needed for similarity</li>
+<li>Less parsing ambiguity for models</li>
+</ul>
+<p>Result: more reliable reasoning with fewer tokens and simpler prompts.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Streaming Events</h2>
+<p>Represent IoT/streaming readings as typed event objects.</p>
+<pre class="code">{
+  "@type": "SensorReading",
+  "sensor": "humidity-01",
+  "value": 56.3,
+  "@unit": "%",
+  "@timestamp": 1738859821
+}</pre>
+<p>Downstream systems can route, validate, and index by type, unit, and time.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="features"><div class="section-header">
+<h2>Core Properties</h2><p>Why .sJson makes AI systems more reliable.</p>
+</div>
+<div class="features-grid">
+<div class="feature-card"><h3>Canonical</h3><p>Stable structure that compiles deterministically from .aion.</p></div>
+<div class="feature-card"><h3>Semantic Tokens</h3><p>Roles, directives, and symbols become explicit fields.</p></div>
+<div class="feature-card"><h3>AI model‑Friendly</h3><p>Encodes hints and context so models reason with fewer tokens.</p></div>
+<div class="feature-card"><h3>Strict Validation</h3><p>Schema‑first approach simplifies contracts between services.</p></div>
+<div class="feature-card"><h3>Portable</h3><p>Works wherever JSON works — no special runtime required.</p></div>
+<div class="feature-card"><h3>Traceable</h3><p>Source mapping links fields back to .aion lines for debugging.</p></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Sample Conversion</h2>
+<p>From Aion notation to .sJson:</p>
+<pre class="code">{A}
+user @role: "Analyst"
+query: "Weekly signup trend"
+@directive(analyze): "time-series"
+{/A}</pre>
+<pre class="code">{
+  "user": { "value": "Analyst", "role": true },
+  "query": "Weekly signup trend",
+  "directives": [{ "name": "analyze", "args": ["time-series"] }]
+}</pre>
+<p>This preserves intent (<em>role</em>, <em>analyze</em>) so downstream components can respond intelligently.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>Semantic Metadata Example</h2>
+<p>The same data, first as plain JSON, then as Structured JSON with semantics:</p>
+<h3>Plain JSON</h3>
+<pre class="code">{
+  "city": "Daytona Beach",
+  "temperature": 82
+}</pre>
+<h3>Structured JSON (.sJson)</h3>
+<pre class="code">{
+  "@type": "WeatherReport",
+  "@context": "weather.schema",
+  "city": { "@value": "Daytona Beach", "@geo": [29.2108, -81.0228] },
+  "temperature": { "@value": 82, "@unit": "F" },
+  "@confidence": 0.98
+}</pre>
+<h3>Why this makes AI models smarter</h3>
+<ul>
+<li><strong>Type + context</strong> — <code>@type</code> and <code>@context</code> tell the model what this object represents, reducing ambiguity.</li>
+<li><strong>Grounding</strong> — <code>@geo</code> anchors the city to coordinates, enabling maps, weather APIs, and retrieval by location.</li>
+<li><strong>Units + value</strong> — <code>@unit</code> clarifies Fahrenheit; <code>@value</code> keeps the numeric form explicit.</li>
+<li><strong>Trust signals</strong> — <code>@confidence</code> lets downstream logic and models weigh results appropriately.</li>
+<li><strong>Better retrieval</strong> — explicit semantics improve vector and symbolic search with fewer prompt tokens.</li>
+</ul>
+<p>Result: fewer prompt hacks, more reliable reasoning, and easier integrations across your stack.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h2>How To Implement</h2>
+<ol>
+<li><strong>Define syntax</strong> — Reserve <code>@</code> keys (<code>@type</code>, <code>@link</code>, <code>@confidence</code>).</li>
+<li><strong>Parse &amp; compile</strong> — Author in .aion, compile to .sJson deterministically.</li>
+<li><strong>Store</strong> — Keep editable text; use MessagePack/Protobuf for speed if needed.</li>
+<li><strong>Embed</strong> — Generate vectors on write for semantic search.</li>
+</ol>
+<p>Result: a semantic memory store ready for retrieval‑augmented AI models.</p>
+</div>
+<div class="about-visual"><div class="about-shape"></div></div>
+</div></section>
+<section class="about"><div class="about-content">
+<div class="about-text">
+<h3>Normative Notes (v0.1)</h3>
+<ul>
+<li><strong>MUST</strong> include <code>@type</code>. <strong>SHOULD</strong> include <code>@id</code> and <code>@context</code>.</li>
+<li>Use RFC 3339/ISO 8601 (UTC) for <code>@timestamp</code> (e.g., <code>2025-01-01T12:34:56Z</code>).</li>
+<li>If using <code>@embedding</code>, include <code>@embedding_model</code> (string) and <code>@embedding_dim</code> (number).</li>
+<li><code>@transform</code> references a rule ID or declarative transform — no arbitrary code execution.</li>
+<li>Keys prefixed with <code>@</code> are reserved by the spec; domain fields are unprefixed. Parsers MUST ignore unknown keys.</li>
+<li>Optional: include <code>@spec</code> pointing to the spec URL/version for validation.</li>
+<li>Prefer https URLs in <code>@source</code>; custom schemes should be documented.</li>
+</ul>
+<h3>Updated Example (with metadata)</h3>
+<pre class="code">{
+  "@spec": "https://aionscript.com/specs/sjson/0.1",
+  "@type": "UtilityClass",
+  "@id": "bg-mint-500",
+  "@context": "https://aion.dev/tailwind",
+  "description": "Applies mint background color",
+  "css": "background-color: var(--color-mint-500);",
+  "@embedding_model": "text-embedding-3-large",
+  "@embedding_dim": 1536,
+  "@embedding": [0.21, -0.34, 0.89],
+  "@confidence": 0.98,
+  "@source": "https://github.com/tailwindlabs/tailwindcss/blob/master/src/plugins/backgroundColor.js",
+  "@link": ["bg-green-500", "bg-teal-500"]
+}</pre>
+</div>
+</div></section>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-brand">
+<a class="footer-brand-link" href="index.html">
+<span class="footer-logo-brace" style="color:#76C5F0;">{</span>
+<span class="footer-logo-a" style="color:#E8EAED;">A</span>
+<span class="footer-logo-brace" style="color:#76C5F0;">}</span>
+<span class="footer-logo-text" style="color:#E8EAED;">AionScript™</span>
+</a>
+<p>Building the future of web experiences with AionScript</p>
+</div>
+<div class="footer-links">
+<div class="footer-column">
+<h4>Product</h4>
+<a href="aion.html">Aion Language</a>
+<a href="sjson.html">Structured JSON</a>
+<a href="docs.html">Documentation</a>
+<a href="roadmap.html#playground">API &amp; SDK</a>
+</div>
+<div class="footer-column">
+<h4>Company</h4>
+<a href="history.html">About</a>
+<a href="press.html">Press</a>
+<a href="index.html#contact">Contact</a>
+</div>
+<div class="footer-column">
+<h4>Support</h4>
+<a href="docs.html">Help &amp; Guides</a>
+<a href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">GitHub</a>
+<a href="privacy.html">Privacy</a>
+<a href="licensing.html">Licensing</a>
+<a href="trademark.html">Trademark</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2024 AionScript. All rights reserved. Patent pending.</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
