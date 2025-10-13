@@ -155,13 +155,13 @@
         <p>This demonstrates how Aion expresses roles and intent inline, then compiles to .sJson for machines.</p>
         <br>
         
-        <pre class="code"><code class="language-plaintext">{
+        <pre class="code"><code class="language-plaintext">{A}
 title: "Marketing plan"
 owner @role: "PM"
 audience @role: ["Design","Growth"]
 goals: +["Increase signups","Clarify value"]
-@directive(generate): brief for Q1 launch }
-</code></pre>
+@directive(generate): brief for Q1 launch
+{/A}</code></pre>
 
 <br>
         <p>In Aion, <em>@role</em> and <em>@directive</em> are explicit semantics — simple to read, powerful for AI.</p>
