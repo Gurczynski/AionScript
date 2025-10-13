@@ -2,7 +2,7 @@
 
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Structured JSON (.sJson) • AionScript</title>
+<title>Structured JSON (.sJson) — Canonical, Verifiable, Policy-Aware</title>
 <link href="styles.css" rel="stylesheet"/>
 <link href="https://aionscript.com" rel="canonical"/>
     <!-- Google tag (gtag.js) -->
@@ -14,7 +14,7 @@
 
   gtag('config', 'G-YTKG6YYGDJ');
 </script>
-<meta content="Transform flat data into living, self‑describing structures that empower AI models to reason contextually." name="description"/><meta content="Structured JSON (.sJson) • AionScript" property="og:title"/><meta content="Smarter JSON for AI ecosystems." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Structured JSON (.sJson)", "url": "https://aionscript.com/sjson.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
+<meta content="Canonicalize objects to @hash, optionally sign with Ed25519, and attach evidence/confidence, provenance, and policy flags." name="description"/><meta content="Structured JSON (.sJson) — Canonical, Verifiable, Policy-Aware" property="og:title"/><meta content="Semantic, verifiable JSON for AI: canonicalization, signatures, retrieval signals, provenance, and policy." property="og:description"/><meta content="https://aionscript.com/sjson.html" property="og:url"/><meta content="article" property="og:type"/><meta content="https://aionscript.com/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Structured JSON (.sJson)", "url": "https://aionscript.com/sjson.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
 <!-- Navigation -->
 <nav class="navbar">
 <div class="nav-container">
@@ -70,7 +70,31 @@
 </div>
 </nav>
 <main>
-<section class="hero hero--mini"><div class="hero-content">
+  <section class="hero hero--mini">
+    <div class="hero-content">
+      <h1 class="hero-title">Structured JSON (.sJson)</h1>
+      <p class="hero-subtitle">The canonical machine format for AionScript — semantic, verifiable, policy-aware.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="docs.html">Docs</a>
+        <a class="btn btn-secondary" href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-header">
+      <h2>What .sJson carries</h2>
+      <p>Everything a model or system needs to trust and enforce.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><h3>Identity &amp; semantics</h3><p><code>@type</code>, <code>@id</code>, <code>@context</code>, <code>@link</code></p></div>
+      <div class="feature-card"><h3>Retrieval signals</h3><p><code>@coverage</code>, <code>@confidence</code>, <code>@evidence[]</code>, freshness</p></div>
+      <div class="feature-card"><h3>Verifiability</h3><p>Canonicalization → <code>@hash</code> &amp; optional Ed25519 signatures</p></div>
+      <div class="feature-card"><h3>Policy &amp; provenance</h3><p><code>@classification</code>, <code>@consent</code>, <code>@retention</code>, <code>@license</code>, <code>@policyRef</code>, <code>@provenanceChain</code></p></div>
+    </div>
+  </section>
+
+  <section class="hero hero--mini"><div class="hero-content">
 <h1 class="hero-title">Structured JSON (.sJson)</h1>
 <p class="hero-subtitle">Canonical, machine‑ready JSON enriched with Aion’s semantics.</p>
 <div class="hero-actions">
@@ -82,7 +106,7 @@
 <div class="about-text">
 <h2>GitHub HTML → sJson</h2>
 <p>Examples of extracting HTML from GitHub and shaping it into sJson for AI ingestion.</p>
-<h3>HtmlDocument + Chunks</h3>
+<h3>HtmlDocument + Chunks</h3><br>
 <pre class="code">{
   "@spec": "https://aionscript.com/specs/sjson/0.1",
   "@type": "HtmlDocument",
@@ -130,8 +154,8 @@
       "@source": "https://github.com/acme/widgets/blob/a1b2c3d/docs/index.html#L48"
     }
   ]
-}</pre>
-<h3>HtmlSnippet (focused extraction)</h3>
+}</pre><br>
+<h3>HtmlSnippet (focused extraction)</h3><br>
 <pre class="code">{
   "@spec": "https://aionscript.com/specs/sjson/0.1",
   "@type": "HtmlSnippet",
@@ -149,7 +173,7 @@
   "@embedding_dim": 3072,
   "@embedding": [0.05, -0.22, 0.64],
   "@transform": "html_to_text(v1)"
-}</pre>
+}</pre><br>
 <h3>Tips</h3>
 <ul>
 <li>Include commit SHA in <code>@source</code> for immutable references.</li>
@@ -180,7 +204,7 @@
 <li><code>@timestamp</code> — ISO string — when captured</li>
 <li><code>@transform</code> — code string — optional transformation rule</li>
 </ul>
-<h3>Example</h3>
+<h3>Example</h3><br>
 <pre class="code">{
   "@type": "UtilityClass",
   "@id": "bg-mint-500",
@@ -191,7 +215,7 @@
   "@confidence": 0.98,
   "@source": "github://tailwindlabs/tailwindcss/src/plugins/backgroundColor.js",
   "@link": ["bg-green-500", "bg-teal-500"]
-}</pre>
+}</pre><br>
 </div>
 <div class="about-visual"><div class="about-shape"></div></div>
 </div></section>
@@ -204,7 +228,7 @@
   "text": "Tailwind’s dark mode now uses @custom-variant",
   "@embedding": [0.02, -0.33, 0.81],
   "@source": "tailwindcss.com/docs/dark-mode"
-}</pre>
+}</pre><br>
 <p>This enables similarity search without managing a separate vector database.</p>
 </div>
 <div class="about-visual"><div class="about-shape"></div></div>
@@ -250,7 +274,7 @@
   "value": 56.3,
   "@unit": "%",
   "@timestamp": 1738859821
-}</pre>
+}</pre><br>
 <p>Downstream systems can route, validate, and index by type, unit, and time.</p>
 </div>
 <div class="about-visual"><div class="about-shape"></div></div>
@@ -269,17 +293,17 @@
 <section class="about"><div class="about-content">
 <div class="about-text">
 <h2>Sample Conversion</h2>
-<p>From Aion notation to .sJson:</p>
-<pre class="code">{A}
+<p>From Aion notation to .sJson:</p><br>
+<pre class="code">
 user @role: "Analyst"
 query: "Weekly signup trend"
 @directive(analyze): "time-series"
-{/A}</pre>
+</pre><br>
 <pre class="code">{
   "user": { "value": "Analyst", "role": true },
   "query": "Weekly signup trend",
   "directives": [{ "name": "analyze", "args": ["time-series"] }]
-}</pre>
+}</pre><br>
 <p>This preserves intent (<em>role</em>, <em>analyze</em>) so downstream components can respond intelligently.</p>
 </div>
 <div class="about-visual"><div class="about-shape"></div></div>
@@ -288,19 +312,19 @@ query: "Weekly signup trend"
 <div class="about-text">
 <h2>Semantic Metadata Example</h2>
 <p>The same data, first as plain JSON, then as Structured JSON with semantics:</p>
-<h3>Plain JSON</h3>
+<h3>Plain JSON</h3><br>
 <pre class="code">{
   "city": "Daytona Beach",
   "temperature": 82
-}</pre>
-<h3>Structured JSON (.sJson)</h3>
+}</pre><br>
+<h3>Structured JSON (.sJson)</h3><br>
 <pre class="code">{
   "@type": "WeatherReport",
   "@context": "weather.schema",
   "city": { "@value": "Daytona Beach", "@geo": [29.2108, -81.0228] },
   "temperature": { "@value": 82, "@unit": "F" },
   "@confidence": 0.98
-}</pre>
+}</pre><br>
 <h3>Why this makes AI models smarter</h3>
 <ul>
 <li><strong>Type + context</strong> — <code>@type</code> and <code>@context</code> tell the model what this object represents, reducing ambiguity.</li>
@@ -338,7 +362,7 @@ query: "Weekly signup trend"
 <li>Optional: include <code>@spec</code> pointing to the spec URL/version for validation.</li>
 <li>Prefer https URLs in <code>@source</code>; custom schemes should be documented.</li>
 </ul>
-<h3>Updated Example (with metadata)</h3>
+<h3>Updated Example (with metadata)</h3><br>
 <pre class="code">{
   "@spec": "https://aionscript.com/specs/sjson/0.1",
   "@type": "UtilityClass",
@@ -352,7 +376,7 @@ query: "Weekly signup trend"
   "@confidence": 0.98,
   "@source": "https://github.com/tailwindlabs/tailwindcss/blob/master/src/plugins/backgroundColor.js",
   "@link": ["bg-green-500", "bg-teal-500"]
-}</pre>
+}</pre><br>
 </div>
 </div></section>
 </main>
