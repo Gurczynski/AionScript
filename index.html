@@ -69,6 +69,7 @@
       <a href="sjson.html" class="nav-link">.sJson</a>
       <a href="history.html" class="nav-link">About</a>
       <a href="adoption.html" class="nav-link">Adoption</a>
+      <a href="beta.html" class="nav-link">Beta</a>
       <a href="roadmap.html" class="nav-link">Roadmap</a>
       <a href="press.html" class="nav-link">Press</a>
     </div>
@@ -103,6 +104,7 @@
       <a href="sjson.html" class="nav-link">.sJson</a>
       <a href="history.html" class="nav-link">About</a>
       <a href="adoption.html" class="nav-link">Adoption</a>
+      <a href="beta.html" class="nav-link">Beta</a>
       <a href="roadmap.html" class="nav-link">Roadmap</a>
       <a href="press.html" class="nav-link">Press</a>
       <a href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener" class="nav-link">GitHub</a>
@@ -260,6 +262,103 @@
                     <p>Make your data AI model‑ready offline; keep control and privacy on‑prem.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Why different (4-up grid) -->
+        <section class="features">
+          <div class="section-header">
+            <h2>Why AionScript is different</h2>
+            <p>From structure → meaning: semantics, evidence, verifiability, and policy in the object itself.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Meaning built-in</h3>
+              <p><code>@type</code>, <code>@context</code>, <code>@link</code>, <code>@confidence</code>, <code>@embedding</code>. No more guessing across tools and models.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Grounded by evidence</h3>
+              <p><code>@coverage</code>, <code>@evidence[]</code>, and freshness gating. Gate weak answers and explain retrieval.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Verifiable</h3>
+              <p>Canonicalize to <code>@hash</code> (SHA-256); optional Ed25519 <code>@sig/@keyId/@pubKey</code> for artifact trust &amp; audits.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Provenance &amp; policy</h3>
+              <p><code>@provenanceChain</code>, <code>@classification</code>, <code>@consent</code>, <code>@retention</code>, <code>@license</code>, <code>@policyRef</code> — governance by construction.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- How it works (3 steps) -->
+        <section class="about">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>How it works</h2>
+              <ol>
+                <li><strong>Author</strong> with intent in <code>.aion</code> (reserve <code>@</code> for semantics).</li>
+                <li><strong>Compile &amp; validate</strong> to <code>.sJson</code> (strong schema, canonicalized, optionally signed).</li>
+                <li><strong>Enforce &amp; trust</strong> at runtime (evidence, confidence, freshness, provenance, policy).</li>
+              </ol>
+            </div>
+            <div class="about-visual"><div class="about-shape"></div></div>
+          </div>
+        </section>
+
+        <!-- Local AI accuracy -->
+        <section class="features">
+          <div class="section-header">
+            <h2>Make local AI smarter &amp; more accurate</h2>
+            <p>Better data contracts → fewer guesses, fewer hallucinations, better grounding — even on 7B–13B models.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card"><h3>Clear semantics</h3><p>Less prompt boilerplate; more room for actual content within the context window.</p></div>
+            <div class="feature-card"><h3>Evidence-bound answers</h3><p>Require <code>@evidence[]</code> and thresholds for <code>@coverage/@confidence</code>.</p></div>
+            <div class="feature-card"><h3>Freshness control</h3><p>Use <code>@timestamp</code> with freshness half-life to avoid outdated claims.</p></div>
+            <div class="feature-card"><h3>Deterministic artifacts</h3><p>Canonical <code>@hash</code> + optional <code>@sig</code> stabilize caching and regressions.</p></div>
+          </div>
+        </section>
+
+                <!-- CTA -->
+        <section class="about">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>From structure to meaning</h2>
+              <p>AionScript makes every AI object understandable, verifiable, and governable. That’s the leap.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="beta.html">Join the Beta</a>
+                <a class="btn btn-secondary" href="docs.html">Read the Docs</a>
+                <a class="btn btn-secondary" href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+            <div class="about-visual"><div class="about-shape"></div></div>
+          </div>
+        </section>
+        
+        <!-- Dev & Enterprise lanes -->
+        <section class="features">
+          <div class="section-header">
+            <h2>Built for developers &amp; enterprises</h2>
+            <p>Start open-source; add Core when you need managed provenance and policy orchestration.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Developer lane</h3>
+              <p>MIT SDK/CLI, adapters (CSV, PDF, APIs, SQL, Mongo), Playground, editor plugins.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Enterprise lane</h3>
+              <p>Provenance registry, signing service, centralized policy bundles, governance dashboards, key management.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Adapters</h3>
+              <p><code>csv_to_sjson</code>, <code>pdf_to_sjson</code>, <code>sql_to_sjson</code>, <code>mongo_to_sjson</code>, <code>fetch_to_sjson</code>, <code>embedding_to_sjson</code>.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Status</h3>
+              <p>Patent pending • Open specification • Local-first • Model-agnostic.</p>
+            </div>
+          </div>
         </section>
 
         <!-- About Section -->

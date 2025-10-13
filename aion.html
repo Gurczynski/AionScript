@@ -1,179 +1,278 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The Aion Language (.aion) — Authoring with Meaning</title>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="canonical" href="https://aionscript.com/aion.html"/>
 
-<html lang="en"><head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>The Aion Language (.aion) • AionScript</title>
-<link href="styles.css" rel="stylesheet"/>
-<link href="https://aionscript.com" rel="canonical"/>
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTKG6YYGDJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-YTKG6YYGDJ');
 </script>
-<meta content="The bridge between logic, structure, and semantic meaning — Aion lets machines truly understand your data." name="description"/><meta content="The Aion Language (.aion) • AionScript" property="og:title"/><meta content="A human‑readable intelligent data syntax." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Aion Language (.aion)", "url": "https://aionscript.com/aion.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
+
+<meta name="description" content="Author intent in .aion, compile to .sJson. Reserve @ keys for semantics: types, context, links, confidence, evidence."/>
+<meta property="og:title" content="The Aion Language (.aion) — Authoring with Meaning"/>
+<meta property="og:description" content="Human-readable authoring with reserved @ keys that compile to verifiable .sJson."/>
+<meta property="og:url" content="https://aionscript.com/aion.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://aionscript.com/og-image.png"/>
+<meta property="og:site_name" content="AionScript"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The Aion Language (.aion) — Authoring with Meaning"/>
+<meta name="twitter:description" content="Human-readable authoring with reserved @ keys that compile to verifiable .sJson."/>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
 <!-- Navigation -->
-<nav class="navbar">
-<div class="nav-container">
-<div class="nav-brand">
-<a class="nav-brand-link" href="index.html">
-<span class="nav-logo-brace" style="color: #76C5F0;">{</span>
-<span class="footer-logo-a" style="color: #E8EAED;">A</span>
-<span class="nav-logo-brace" style="color: #76C5F0;">}</span>
-<span class="nav-logo-text" style="color: #E8EAED;">AionScript™</span>
-</a>
-</div>
-<div class="nav-menu">
-<a class="nav-link" href="index.html">Home</a>
-<a class="nav-link" href="aion.html">.aion</a>
-<a class="nav-link" href="sjson.html">.sJson</a>
-<a class="nav-link" href="history.html">About</a>
-<a class="nav-link" href="adoption.html">Adoption</a>
-<a class="nav-link" href="roadmap.html">Roadmap</a>
-<a class="nav-link" href="press.html">Press</a>
-</div>
-<div class="nav-actions">
-<a aria-label="GitHub" class="btn btn-secondary" href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">
-<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 19c-5 1.5-5-2.5-7-3
-                     m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
-                     c3.14-.35 6.44-1.54 6.44-7
-                     A5.44 5.44 0 0 0 20 4.77
-                     5.07 5.07 0 0 0 19.91 1
-                     S18.73.65 16 2.48
-                     a13.38 13.38 0 0 0-7 0
-                     C6.27.65 5.09 1 5.09 1
-                     A5.07 5.07 0 0 0 5 4.77
-                     a5.44 5.44 0 0 0-1.5 3.78
-                     c0 5.42 3.3 6.61 6.44 7
-                     A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg>
-</a>
-<a class="btn btn-primary" href="docs.html">Docs</a>
-</div>
-<!-- Mobile Toggle + Overlay -->
-<button aria-expanded="false" aria-label="Open menu" class="nav-toggle">☰</button>
-<div aria-hidden="true" class="nav-overlay">
-<a class="nav-link" href="index.html">Home</a>
-<a class="nav-link" href="aion.html">.aion</a>
-<a class="nav-link" href="sjson.html">.sJson</a>
-<a class="nav-link" href="history.html">About</a>
-<a class="nav-link" href="adoption.html">Adoption</a>
-<a class="nav-link" href="roadmap.html">Roadmap</a>
-<a class="nav-link" href="press.html">Press</a>
-<a class="nav-link" href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">GitHub</a>
-<a class="nav-link" href="docs.html">Docs</a>
-</div>
-</div>
+<nav class="navbar" aria-label="Primary">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a class="nav-brand-link" href="index.html">
+        <span class="nav-logo-brace" style="color: #76C5F0;">{</span>
+        <span class="footer-logo-a" style="color: #E8EAED;">A</span>
+        <span class="nav-logo-brace" style="color: #76C5F0;">}</span>
+        <span class="nav-logo-text" style="color: #E8EAED;">AionScript™</span>
+      </a>
+    </div>
+
+    <div class="nav-menu">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="aion.html" aria-current="page">.aion</a>
+      <a class="nav-link" href="sjson.html">.sJson</a>
+      <a class="nav-link" href="history.html">About</a>
+      <a class="nav-link" href="adoption.html">Adoption</a>
+      <a class="nav-link" href="roadmap.html">Roadmap</a>
+      <a class="nav-link" href="press.html">Press</a>
+    </div>
+
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M9 19c-5 1.5-5-2.5-7-3
+                       m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
+                       c3.14-.35 6.44-1.54 6.44-7
+                       A5.44 5.44 0 0 0 20 4.77
+                       5.07 5.07 0 0 0 19.91 1
+                       S18.73.65 16 2.48
+                       a13.38 13.38 0 0 0-7 0
+                       C6.27.65 5.09 1 5.09 1
+                       A5.07 5.07 0 0 0 5 4.77
+                       a5.44 5.44 0 0 0-1.5 3.78
+                       c0 5.42 3.3 6.61 6.44 7
+                       A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a class="btn btn-primary" href="docs.html">Docs</a>
+    </div>
+
+    <!-- Mobile Toggle + Overlay -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+    <div id="mobile-menu" class="nav-overlay" aria-hidden="true" hidden>
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="aion.html" aria-current="page">.aion</a>
+      <a class="nav-link" href="sjson.html">.sJson</a>
+      <a class="nav-link" href="history.html">About</a>
+      <a class="nav-link" href="adoption.html">Adoption</a>
+      <a class="nav-link" href="roadmap.html">Roadmap</a>
+      <a class="nav-link" href="press.html">Press</a>
+      <a class="nav-link" href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="nav-link" href="docs.html">Docs</a>
+    </div>
+  </div>
 </nav>
-<main>
-<section class="hero hero--mini"><div class="hero-content">
-<h1 class="hero-title">The Aion Language (.aion)</h1>
-<p class="hero-subtitle">A human‑readable, AI‑native syntax for expressing meaning, not just structure.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="docs.html">Read the Docs</a>
-<a class="btn btn-secondary" href="adoption.html">Adopt Aion</a>
-</div>
-</div></section>
-<section class="features"><div class="section-header">
-<h2>Why Aion</h2><p>Bring intent, roles, and semantics directly into your data.</p>
-</div>
-<div class="features-grid">
-<div class="feature-card"><h3>Human‑first</h3><p>Readable like prose; precise like code. Designed for teams to reason together.</p></div>
-<div class="feature-card"><h3>AI‑native</h3><p>Optimized for local and hosted AI models. No more brittle prompts glued onto flat JSON.</p></div>
-<div class="feature-card"><h3>Composable</h3><p>Symbols and directives compose cleanly for large systems and reusable patterns.</p></div>
-<div class="feature-card"><h3>Deterministic</h3><p>Backed by a canonical .sJson form so pipelines remain stable and testable.</p></div>
-<div class="feature-card"><h3>Interoperable</h3><p>Transforms to JSON when needed, while preserving semantic cues for AI.</p></div>
-<div class="feature-card"><h3>Safe by Design</h3><p>Strict typing + validation paths reduce runtime surprises in AI flows.</p></div>
-</div></section>
-<section class="about"><div class="about-content">
-<div class="about-text">
-<h2>Quick Example</h2>
-<p>This demonstrates how Aion expresses roles and intent inline, then compiles to .sJson for machines.</p>
-<pre><code>{A}
+
+<main id="main">
+  <section class="hero hero--mini">
+    <div class="hero-content">
+      <h1 class="hero-title">The Aion Language (.aion)</h1>
+      <p class="hero-subtitle">Human-readable authoring with reserved <code>@</code> keys for meaning. Author with intent; compile to deterministic <strong>.sJson</strong>.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="docs.html">Read the Docs</a>
+        <a class="btn btn-secondary" href="sjson.html">Structured JSON</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-header">
+      <h2>Authoring principles</h2>
+      <p>Clarity, consistency, and compile-time guarantees.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><h3>Semantics first</h3><p>Reserve <code>@type</code>, <code>@context</code>, <code>@id</code>.</p></div>
+      <div class="feature-card"><h3>Deterministic output</h3><p>Compile to canonical <strong>.sJson</strong> that tools and models can trust.</p></div>
+      <div class="feature-card"><h3>Portable</h3><p>Works offline; independent of model/vendor.</p></div>
+      <div class="feature-card"><h3>Lint &amp; validate</h3><p>Style rules + JSON Schema validation.</p></div>
+    </div>
+  </section>
+
+  <section class="hero hero--mini">
+    <div class="hero-content">
+      <h2 class="hero-title">The Aion Language (.aion)</h2>
+      <p class="hero-subtitle">A human-readable, AI-native syntax for expressing meaning, not just structure.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="docs.html">Read the Docs</a>
+        <a class="btn btn-secondary" href="adoption.html">Adopt Aion</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-header">
+      <h2>Why Aion</h2>
+      <p>Bring intent, roles, and semantics directly into your data.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><h3>Human-first</h3><p>Readable like prose; precise like code. Designed for teams to reason together.</p></div>
+      <div class="feature-card"><h3>AI-native</h3><p>Optimized for local and hosted AI models. No more brittle prompts glued onto flat JSON.</p></div>
+      <div class="feature-card"><h3>Composable</h3><p>Symbols and directives compose cleanly for large systems and reusable patterns.</p></div>
+      <div class="feature-card"><h3>Deterministic</h3><p>Backed by a canonical .sJson form so pipelines remain stable and testable.</p></div>
+      <div class="feature-card"><h3>Interoperable</h3><p>Transforms to JSON when needed, while preserving semantic cues for AI.</p></div>
+      <div class="feature-card"><h3>Safe by Design</h3><p>Strict typing + validation paths reduce runtime surprises in AI flows.</p></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Quick Example</h2>
+        <p>This demonstrates how Aion expresses roles and intent inline, then compiles to .sJson for machines.</p>
+        <br>
+        
+        <pre class="code"><code class="language-plaintext">{
 title: "Marketing plan"
 owner @role: "PM"
 audience @role: ["Design","Growth"]
 goals: +["Increase signups","Clarify value"]
-@directive(generate): brief for Q1 launch
-{/A}</code></pre>
-<p>In Aion, <em>@role</em> and <em>@directive</em> are explicit semantics — simple to read, powerful for AI.</p>
-</div>
-<div class="about-visual"><div class="about-shape"></div></div>
-</div></section>
-<section class="features"><div class="section-header">
-<h2>Smart Semantics</h2><p>.aion adds meaning that compiles to .sJson.</p>
-</div>
-<div class="features-grid">
-<div class="feature-card"><h3>Type Awareness</h3><p>Declare <code>@type</code> and validate at compile time.</p></div>
-<div class="feature-card"><h3>Context &amp; Links</h3><p>Use <code>@context</code> and <code>@link</code> to connect data.</p></div>
-<div class="feature-card"><h3>Confidence</h3><p>Capture <code>@confidence</code> and embeddings for retrieval.</p></div>
-<div class="feature-card"><h3>Adaptation</h3><p>Opt‑in directives and hooks for controlled execution.</p></div>
-</div></section>
-<section class="contact"><div class="section-header">
-<h2>Start Using Aion</h2><p>Bring intent and clarity to your data model.</p>
-</div>
-<div class="contact-content">
-<a class="btn btn-primary" href="https://github.com/aionscript/aion-lang" target="_blank">View on GitHub</a>
-<a class="btn btn-secondary" href="docs.html">Implementation Guide</a>
-</div></section>
+@directive(generate): brief for Q1 launch }
+</code></pre>
+
+<br>
+        <p>In Aion, <em>@role</em> and <em>@directive</em> are explicit semantics — simple to read, powerful for AI.</p>
+      </div>
+      <div class="about-visual"><div class="about-shape"></div></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-header">
+      <h2>Smart Semantics</h2>
+      <p>.aion adds meaning that compiles to .sJson.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><h3>Type Awareness</h3><p>Declare <code>@type</code> and validate at compile time.</p></div>
+      <div class="feature-card"><h3>Context &amp; Links</h3><p>Use <code>@context</code> and <code>@link</code> to connect data.</p></div>
+      <div class="feature-card"><h3>Confidence</h3><p>Capture <code>@confidence</code> and embeddings for retrieval.</p></div>
+      <div class="feature-card"><h3>Adaptation</h3><p>Opt-in directives and hooks for controlled execution.</p></div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="section-header">
+      <h2>Start Using Aion</h2>
+      <p>Bring intent and clarity to your data model.</p>
+    </div>
+    <div class="contact-content">
+      <a class="btn btn-primary" href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      <a class="btn btn-secondary" href="docs.html">Implementation Guide</a>
+    </div>
+  </section>
 </main>
+
 <!-- Footer -->
 <footer class="footer">
-<div class="footer-content">
-<div class="footer-brand">
-<a class="footer-brand-link" href="index.html">
-<span class="footer-logo-brace" style="color:#76C5F0;">{</span>
-<span class="footer-logo-a" style="color:#E8EAED;">A</span>
-<span class="footer-logo-brace" style="color:#76C5F0;">}</span>
-<span class="footer-logo-text" style="color:#E8EAED;">AionScript™</span>
-</a>
-<p>Building the future of web experiences with AionScript</p>
-</div>
-<div class="footer-links">
-<div class="footer-column">
-<h4>Product</h4>
-<a href="aion.html">Aion Language</a>
-<a href="sjson.html">Structured JSON</a>
-<a href="docs.html">Documentation</a>
-<a href="roadmap.html#playground">API &amp; SDK</a>
-</div>
-<div class="footer-column">
-<h4>Company</h4>
-<a href="history.html">About</a>
-<a href="press.html">Press</a>
-<a href="index.html#contact">Contact</a>
-</div>
-<div class="footer-column">
-<h4>Support</h4>
-<a href="docs.html">Help &amp; Guides</a>
-<a href="https://github.com/aionscript/aion-lang" rel="noopener" target="_blank">GitHub</a>
-<a href="privacy.html">Privacy</a>
-<a href="licensing.html">Licensing</a>
-<a href="trademark.html">Trademark</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<p> 2025 AionScript. All rights reserved. Patent pending.</p>
-</div>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html">
+        <span class="footer-logo-brace" style="color:#76C5F0;">{</span>
+        <span class="footer-logo-a" style="color:#E8EAED;">A</span>
+        <span class="footer-logo-brace" style="color:#76C5F0;">}</span>
+        <span class="footer-logo-text" style="color:#E8EAED;">AionScript™</span>
+      </a>
+      <p>Building the future of web experiences with AionScript</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="aion.html">Aion Language</a>
+        <a href="sjson.html">Structured JSON</a>
+        <a href="docs.html">Documentation</a>
+        <a href="roadmap.html#playground">API &amp; SDK</a>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="history.html">About</a>
+        <a href="press.html">Press</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <a href="docs.html">Help &amp; Guides</a>
+        <a href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="licensing.html">Licensing</a>
+        <a href="trademark.html">Trademark</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2025 AionScript. All rights reserved. Patent pending.</p>
+  </div>
 </footer>
-    <script src="script.js"></script>
-    <script src="includes.js"></script>
-    <script>
-        // Dynamic copyright year
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentYear = new Date().getFullYear();
-            const copyrightElements = document.querySelectorAll('.footer-bottom p');
-            copyrightElements.forEach(function(element) {
-                if (element.textContent.includes('©') && element.textContent.includes('AionScript')) {
-                    element.innerHTML = element.innerHTML.replace(/\d{4}/, currentYear);
-                }
-            });
-        });
-    </script>
+
+<script src="script.js"></script>
+<script src="includes.js"></script>
+<script>
+  // Mobile nav toggle: sync ARIA + visibility without changing CSS classes
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.querySelector('.nav-toggle');
+    const overlay = document.getElementById('mobile-menu');
+    if (btn && overlay) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        overlay.hidden = expanded;
+        overlay.setAttribute('aria-hidden', String(expanded));
+      });
+    }
+  });
+</script>
+<script>
+  // Dynamic copyright year (handles plain years without ©)
+  document.addEventListener('DOMContentLoaded', function() {
+    const y = String(new Date().getFullYear());
+    document.querySelectorAll('.footer-bottom p').forEach(function(p) {
+      p.innerHTML = p.innerHTML.replace(/\b(19|20)\d{2}\b/, y);
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "The Aion Language (.aion)",
+  "url": "https://aionscript.com/aion.html",
+  "publisher": {"@type": "Organization", "name": "AionScript"},
+  "creator": {"@type": "Person", "name": "Daniel Gurczynski"},
+  "copyrightYear": "2025"
+}
+</script>
 </body>
 </html>
