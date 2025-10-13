@@ -7,6 +7,15 @@
 <title>Trademark Policy — AionScript</title>
 <link href="styles.css" rel="stylesheet"/>
 <link href="https://aionscript.com" rel="canonical"/>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTKG6YYGDJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTKG6YYGDJ');
+</script>
 <meta content="Trademark policy for the AionScript name and logo." name="description"/>
 <meta content="Trademark Policy — AionScript" property="og:title"/>
 <meta content="Guidelines for using the AionScript name and logo." property="og:description"/>
@@ -140,9 +149,21 @@
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2024 AionScript. All rights reserved. Patent pending.</p>
+<p> 2025 AionScript. All rights reserved. Patent pending.</p>
 </div>
 </footer>
 <script src="script.js"></script>
+<script>
+        // Dynamic copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.footer-bottom p');
+            copyrightElements.forEach(function(element) {
+                if (element.textContent.includes('©') && element.textContent.includes('AionScript')) {
+                    element.innerHTML = element.innerHTML.replace(/\d{4}/, currentYear);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

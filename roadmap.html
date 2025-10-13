@@ -5,7 +5,16 @@
 <title>The AionScript Roadmap - AionScript</title>
 <link href="styles.css" rel="stylesheet"/>
 <link href="https://aionscript.com" rel="canonical"/>
-<meta content="Explore whatâs next â from the SDK and CLI to the Core Render and API launch." name="description"/><meta content="The AionScript Roadmap â¢ AionScript" property="og:title"/><meta content="Building the foundation for intelligent ecosystems." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The AionScript Roadmap", "url": "https://aionscript.com/roadmap.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTKG6YYGDJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTKG6YYGDJ');
+</script>
+<meta content="Roadmap • Aion Language, the AI‑native data standard" name="description"/><meta content="The AionScript Roadmap • AionScript" property="og:title"/><meta content="Building the foundation for intelligent ecosystems." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The AionScript Roadmap", "url": "https://aionscript.com/roadmap.html", "publisher": {"@type": "Organization", "name": "AionScript"}, "creator": {"@type": "Person", "name": "Daniel Gurczynski"}, "copyrightYear": "2025"}</script><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body>
 <!-- Navigation -->
 <nav class="navbar">
 <div class="nav-container">
@@ -126,9 +135,21 @@
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2024 AionScript. All rights reserved. Patent pending.</p>
+<p> 2025 AionScript. All rights reserved. Patent pending.</p>
 </div>
 </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Dynamic copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.footer-bottom p');
+            copyrightElements.forEach(function(element) {
+                if (element.textContent.includes('©') && element.textContent.includes('AionScript')) {
+                    element.innerHTML = element.innerHTML.replace(/\d{4}/, currentYear);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

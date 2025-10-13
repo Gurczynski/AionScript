@@ -11,6 +11,15 @@
   <meta property="og:url" content="https://aionscript.com" />
 
   <link rel="canonical" href="https://aionscript.com" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTKG6YYGDJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTKG6YYGDJ');
+</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -192,12 +201,24 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 AionScript. All rights reserved. Patent pending.</p>
+      <p>© 2025 AionScript. All rights reserved. Patent pending.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
   <script src="includes.js"></script>
+  <script>
+        // Dynamic copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.footer-bottom p');
+            copyrightElements.forEach(function(element) {
+                if (element.textContent.includes('©') && element.textContent.includes('AionScript')) {
+                    element.innerHTML = element.innerHTML.replace(/\d{4}/, currentYear);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
