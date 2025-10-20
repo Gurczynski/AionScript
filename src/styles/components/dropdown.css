@@ -1,0 +1,86 @@
+/* Dropdown Component Styles */
+
+.dropdown { 
+  position: relative; 
+}
+
+.dropdown-toggle { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px; 
+  background: transparent; 
+  border: none; 
+  cursor: pointer; 
+  color: var(--text-secondary); 
+  padding: var(--space-sm) var(--space-md); 
+  border-radius: var(--radius-md); 
+  transition: .15s ease; 
+  font: inherit; 
+  text-decoration: none;
+}
+
+.dropdown-toggle:hover { 
+  color: var(--text-primary); 
+  background: var(--surface-3); 
+}
+
+.dropdown-toggle.active {
+  color: var(--brand);
+  background: var(--surface-3);
+}
+
+.dropdown-toggle .caret { 
+  width: 14px; 
+  height: 14px; 
+  display: inline-block; 
+  color: currentColor; 
+  transition: transform .15s ease; 
+}
+
+.dropdown.open .dropdown-toggle .caret { 
+  transform: rotate(180deg); 
+}
+
+.dropdown-menu { 
+  position: absolute; 
+  top: calc(100% + 6px); 
+  left: 0; 
+  min-width: 220px; 
+  background: var(--surface-2); 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-md); 
+  box-shadow: var(--shadow-md); 
+  padding: var(--space-sm) 0; 
+  display: none; 
+  z-index: 1000; 
+}
+
+.dropdown.open .dropdown-menu { 
+  display: block; 
+}
+
+.dropdown-item { 
+  display: block; 
+  padding: var(--space-sm) var(--space-md); 
+  color: var(--text-secondary); 
+  text-decoration: none; 
+  transition: .15s ease; 
+  white-space: nowrap; 
+}
+
+.dropdown-item:hover { 
+  background: var(--surface-3); 
+  color: var(--text-primary); 
+}
+
+/* Override global link styles for dropdown items */
+.dropdown-item:link,
+.dropdown-item:visited {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.dropdown-item:hover:link,
+.dropdown-item:hover:visited {
+  color: var(--text-primary);
+}

@@ -1,0 +1,83 @@
+/* Button Component Styles */
+
+.btn { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: var(--space-sm); 
+  padding: var(--space-sm) var(--space-md); 
+  border: 0; 
+  border-radius: var(--radius-md); 
+  font-size: .875rem; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: .15s ease; 
+  white-space: nowrap; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn:hover, .btn:focus { 
+  text-decoration: none; 
+}
+
+/* Override global link styles for buttons */
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+  color: var(--brand-ink) !important;
+}
+
+.btn-primary:hover:link,
+.btn-primary:hover:visited {
+  color: var(--brand-ink) !important;
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  color: var(--text-primary) !important;
+}
+
+.btn-secondary:hover:link,
+.btn-secondary:hover:visited {
+  color: var(--brand-ink) !important;
+}
+
+.btn:disabled { 
+  opacity: .5; 
+}
+
+.btn-primary { 
+  background: var(--brand) !important; 
+  color: var(--brand-ink) !important; 
+}
+
+.btn-primary:hover:not(:disabled) { 
+  box-shadow: var(--shadow-glow); 
+  filter: brightness(1.05); 
+}
+
+.btn-secondary { 
+  background: var(--surface-3) !important; 
+  color: var(--text-primary) !important; 
+  border: 1px solid var(--border); 
+}
+
+.btn-secondary:hover:not(:disabled) { 
+  background: var(--brand) !important; 
+  color: var(--brand-ink) !important; 
+  border-color: var(--brand); 
+}
+
+.btn-large { 
+  padding: var(--space-lg) var(--space-2xl); 
+  font-size: 1.125rem; 
+}
+
+.btn-full { 
+  width: 100%; 
+}

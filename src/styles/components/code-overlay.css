@@ -1,0 +1,138 @@
+/* Code Overlay Component Styles */
+
+.code-overlay {
+  position: absolute; 
+  top: 50px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 8px; 
+  background: var(--surface-1); 
+  border: 1px solid var(--border); 
+  color: var(--text-1); 
+  padding: 12px; 
+  font: 500 13px ui-monospace, Menlo, Consolas, monospace; 
+  overflow: hidden; 
+  box-shadow: inset 0 0 0 1px rgba(118,197,240,0.1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.code-overlay-inner { 
+  width: 100%; 
+  height: 100%; 
+  white-space: pre-wrap; 
+  overflow: hidden; 
+}
+
+.code-caret { 
+  display: inline-block; 
+  width: 6px; 
+  height: 1em; 
+  background: var(--brand); 
+  margin-left: 2px; 
+  animation: blink 1s steps(1) infinite; 
+  vertical-align: baseline; 
+}
+
+@keyframes blink { 
+  0%,50%{opacity:1} 
+  50.1%,100%{opacity:0} 
+}
+
+/* Docs code block theme - Browser style */
+pre.code {
+  background: var(--surface-2);
+  color: #E8EAED;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow: hidden;
+  white-space: pre;
+  box-shadow: 0 0 20px rgba(118,197,240,0.1);
+  position: relative;
+}
+
+/* Browser title bar for code blocks */
+pre.code::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--surface-3);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Browser traffic lights for code blocks */
+pre.code::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 
+    20px 0 0 #ffbd2e,
+    40px 0 0 #28ca42;
+  z-index: 2;
+}
+
+/* Code content area */
+pre.code {
+  padding-top: 52px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+/* Copy button */
+.code-block-container {
+  position: relative;
+  margin-top: var(--space-md);
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+.copy-button:hover {
+  background: var(--surface-3);
+  color: var(--text-primary);
+  opacity: 1;
+}
+
+.copy-text {
+  font-weight: 500;
+}
+
+/* Syntax highlighting */
+pre.code .keyword   { color: #76C5F0; }
+pre.code .string    { color: #F0C674; }
+pre.code .number    { color: #B5CEA8; }
+pre.code .operator  { color: #F28B82; }
+pre.code .comment   { color: #7a7a7a; font-style: italic; }
+.code-overlay pre.code { all: unset; }

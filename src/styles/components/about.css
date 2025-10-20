@@ -1,0 +1,99 @@
+/* About Component Styles */
+
+.about { 
+  padding: var(--space-2xl); 
+  background: var(--bg-primary); 
+}
+
+.about-content { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  gap: var(--space-2xl); 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.about-text h2 { 
+  font-size: 3rem; 
+  margin-bottom: var(--space-lg); 
+}
+
+.about-text p { 
+  font-size: 1.125rem; 
+  margin-bottom: var(--space-lg); 
+}
+
+.about-visual { 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end; 
+  position: relative;
+  width: 340px;
+  height: 300px;
+}
+
+.about-shape { 
+  width: 340px; 
+  height: 300px; 
+  background: var(--surface-2);
+  border-radius: 12px; 
+  animation: float 7s ease-in-out infinite; 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-shape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--surface-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-shape::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 
+    20px 0 0 #ffbd2e,
+    40px 0 0 #28ca42;
+}
+
+.about a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.about a:hover {
+  color: #A6E1FF;
+}
+
+.about a:visited {
+  color: var(--brand);
+}
+
+.about a:visited:hover {
+  color: #A6E1FF;
+}
+
+.about ul,
+.about ol {
+  margin-top: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.about li {
+  margin-bottom: var(--space-xs);
+}

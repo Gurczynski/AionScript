@@ -1,0 +1,101 @@
+/* Features Component Styles */
+
+.features { 
+  padding: var(--space-2xl); 
+  background: var(--bg-secondary); 
+}
+
+.features-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: var(--space-2xl); 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.feature-card { 
+  background: var(--bg-card); 
+  padding: var(--space-2xl); 
+  border-radius: var(--radius-lg); 
+  text-align: center; 
+  border: 1px solid var(--border); 
+  transition: .3s ease; 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.feature-card::before { 
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  height: 4px; 
+  background: linear-gradient(90deg, var(--brand) 0%, #4285F4 100%); 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: .3s ease; 
+}
+
+.feature-card:hover { 
+  transform: translateY(-6px); 
+  box-shadow: var(--shadow-lg); 
+  border-color: var(--brand); 
+}
+
+.feature-card:hover::before { 
+  transform: scaleX(1); 
+}
+
+.feature-icon { 
+  display: block; 
+  margin-bottom: var(--space-lg); 
+  color: #9AA0A6; 
+  text-align: center; 
+}
+
+.feature-icon svg { 
+  width: 48px; 
+  height: 48px; 
+}
+
+.feature-card h3 { 
+  margin-bottom: var(--space-md); 
+}
+
+.feature-card ul,
+.feature-card ol {
+  list-style: none;
+  padding-left: var(--space-lg);
+  text-align: left;
+  margin-top: var(--space-md);
+}
+
+/* Center content in roadmap cards */
+.features .feature-card ul,
+.features .feature-card ol {
+  text-align: center;
+  padding-left: 0;
+}
+
+.feature-card li {
+  margin-bottom: var(--space-xs);
+}
+
+.feature-card a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.feature-card a:hover {
+  color: #A6E1FF;
+}
+
+.feature-card a:visited {
+  color: var(--brand);
+}
+
+.feature-card a:visited:hover {
+  color: #A6E1FF;
+}

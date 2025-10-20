@@ -1,0 +1,38 @@
+/* AionScript CSS Variables */
+:root {
+  --surface-1: #1a1a1a;
+  --surface-2: #2a2a2a;
+  --surface-3: #3a3a3a;
+  --surface-card: #252525;
+  --text-1: #E8EAED;
+  --text-2: #B0B5BA;
+  --text-muted: #9AA0A6;
+  --brand: #76C5F0;
+  --brand-ink: #0C5C87;
+  --brand-dark: #1557B0;
+  --brand-glow: rgba(118, 197, 240, 0.3);
+  --border: #404040;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 20px rgba(118,197,240,0.3);
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --bg-primary: var(--surface-1);
+  --bg-secondary: var(--surface-2);
+  --bg-tertiary: var(--surface-3);
+  --bg-card: var(--surface-card);
+  --text-primary: var(--text-1);
+  --text-secondary: var(--text-2);
+  --cyan: var(--brand);
+  --cyan-light: var(--brand);
+  --cyan-dark: var(--brand-dark);
+  --cyan-glow: var(--brand-glow);
+}

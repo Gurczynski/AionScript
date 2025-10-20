@@ -1,0 +1,27 @@
+/* Stats Component Styles */
+
+.stats { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: var(--space-lg); 
+  margin-top: var(--space-xl); 
+}
+
+.stat { 
+  text-align: center; 
+}
+
+.stat-number { 
+  display: block; 
+  font-size: 2.5rem; 
+  font-weight: 700; 
+  color: var(--brand); 
+  margin-bottom: var(--space-xs); 
+}
+
+.stat-label { 
+  font-size: .875rem; 
+  color: var(--text-muted); 
+  text-transform: uppercase; 
+  letter-spacing: .5px; 
+}
