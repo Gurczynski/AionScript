@@ -1,10 +1,16 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Beta = () => {
   return (
     <div>
+      <SEO 
+        title="Early Access – AionScript: Join the AI-Native Data Standard"
+        description="Apply for early access to AionScript v1.0 LTF. Help shape the future of intelligent data by working directly with our team and tools."
+        canonicalUrl="https://aionscript.com/beta"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">Early Access Program</h1>

@@ -1,10 +1,16 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
 import CodeBlock from '../components/CodeBlock'
+import SEO from '../components/SEO'
 
 const SJson = () => {
   return (
     <div>
+      <SEO 
+        title="Structured JSON (.sJson) — Canonical, Trusted Data"
+        description=".sJson is the output of AionScript: standard JSON with semantics, evidence, trust, and governance. Fully AI-ready and verifiable."
+        canonicalUrl="https://aionscript.com/sjson"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">Structured JSON (.sJson)</h1>
@@ -69,7 +75,7 @@ const SJson = () => {
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

@@ -1,9 +1,15 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Aion = () => {
   return (
     <div>
+      <SEO 
+        title="The Aion Language (.aion) — Author with Meaning"
+        description=".aion is a human-readable language for intelligent data. Author structured data with semantics, context, and intent. Compile to .sJson."
+        canonicalUrl="https://aionscript.com/aion"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">The Aion Language (.aion)</h1>
@@ -63,7 +69,7 @@ goals: +["Increase signups","Clarify value"]
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

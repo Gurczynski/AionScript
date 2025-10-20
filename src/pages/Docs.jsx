@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Docs = () => {
   return (
     <div>
+      <SEO 
+        title="AionScript Documentation — Language, Format, Examples"
+        description="Learn how to author in .aion, compile to .sJson, and integrate AionScript into your AI-native data systems."
+        canonicalUrl="https://aionscript.com/docs"
+      />
       {/* Hero Section */}
       <section className="hero hero--mini">
         <div className="hero-content">
@@ -54,7 +60,7 @@ const Docs = () => {
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

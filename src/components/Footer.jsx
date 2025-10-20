@@ -41,7 +41,7 @@ const Footer = () => {
           
           <div className="footer-column">
             <h4>Resources</h4>
-            <a href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/aionscript" target="_blank" rel="noopener">GitHub</a>
             <Link to="/licensing">Licensing</Link>
             <Link to="/patent">Patent Info</Link>
             <Link to="/privacy">Privacy Policy</Link>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <a 
-            href="https://github.com/aionscript/aion-lang" 
+            href="https://github.com/aionscript" 
             target="_blank" 
             rel="noopener" 
             aria-label="GitHub"

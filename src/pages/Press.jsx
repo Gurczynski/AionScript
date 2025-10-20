@@ -1,9 +1,15 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Press = () => {
   return (
     <div>
+      <SEO 
+        title="Press & Media – AionScript v1.0 LTF Launch Info"
+        description="Explore AionScript's origin, impact, and strategic vision. Logos, product facts, and quotes for media coverage."
+        canonicalUrl="https://aionscript.com/press"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">Press & Media</h1>
@@ -32,7 +38,7 @@ const Press = () => {
                 <li><strong>Standard status:</strong> Open specification (patent pending)</li>
                 <li><strong>Target users:</strong> Developers (open-source SDK) and Enterprises (governance add-ons)</li>
                 <li><strong>Website:</strong> aionscript.com</li>
-                <li><strong>GitHub:</strong> github.com/aionscript/aion-lang</li>
+                <li><strong>GitHub:</strong> github.com/aionscript</li>
               </ul>
               
               <h3>Why It's Brilliant (TL;DR)</h3>
@@ -77,7 +83,7 @@ const Press = () => {
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

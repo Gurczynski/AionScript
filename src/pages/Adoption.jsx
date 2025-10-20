@@ -1,9 +1,15 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Adoption = () => {
   return (
     <div>
+      <SEO 
+        title="Adopt AionScript — From Open Source to Enterprise"
+        description="Start with open-source CLI and SDK. Scale to enterprise with policy enforcement, governance dashboards, and data trust."
+        canonicalUrl="https://aionscript.com/adoption"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">Adopt AionScript</h1>
@@ -63,7 +69,7 @@ const Adoption = () => {
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

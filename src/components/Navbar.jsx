@@ -82,7 +82,7 @@ const Navbar = () => {
 
         <div className="nav-actions">
           <a 
-            href="https://github.com/aionscript/aion-lang" 
+            href="https://github.com/aionscript" 
             className="btn btn-secondary" 
             aria-label="GitHub" 
             target="_blank" 
@@ -131,7 +131,7 @@ const Navbar = () => {
         <Link to="/roadmap" onClick={closeNav}>Roadmap</Link>
         <Link to="/press" onClick={closeNav}>Press</Link>
         <Link to="/beta" onClick={closeNav}>Early Access</Link>
-        <a href="https://github.com/aionscript/aion-lang" target="_blank" rel="noopener" onClick={closeNav}>GitHub</a>
+        <a href="https://github.com/aionscript" target="_blank" rel="noopener" onClick={closeNav}>GitHub</a>
       </div>
     </nav>
   )

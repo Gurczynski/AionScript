@@ -1,9 +1,15 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const About = () => {
   return (
     <div>
+      <SEO 
+        title="About AionScript — Why Intelligent Data Matters"
+        description="AionScript was created to fix flat, untrustworthy JSON. Our mission: make intelligent, self-describing data the default for modern AI systems."
+        canonicalUrl="https://aionscript.com/about"
+      />
       <section className="hero hero--mini">
         <div className="hero-content">
           <h1 className="hero-title">About AionScript</h1>
@@ -68,7 +74,7 @@ const About = () => {
               <div className="hero-actions">
                 <a 
                   className="btn btn-primary" 
-                  href="https://github.com/aionscript/aion-lang" 
+                  href="https://github.com/aionscript" 
                   target="_blank" 
                   rel="noopener"
                 >

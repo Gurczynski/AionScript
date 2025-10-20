@@ -288,7 +288,7 @@ const Home = () => {
             <Link className="btn btn-primary btn-large" to="/docs">Read the Docs</Link>
             <a 
               className="btn btn-secondary btn-large" 
-              href="https://github.com/aionscript/aion-lang" 
+              href="https://github.com/aionscript" 
               target="_blank" 
               rel="noopener"
             >
