@@ -1,6 +1,10 @@
 /* Responsive Styles */
 
 @media (max-width: 768px) {
+  /* Hide GitHub and Get Started buttons on mobile */
+  .nav-actions {
+    display: none;
+  }
   .container {
     padding: 0 var(--space-md);
   }
