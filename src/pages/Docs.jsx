@@ -12,9 +12,10 @@ const Docs = () => {
         canonicalUrl="https://aionscript.com/docs"
       />
       {/* Hero Section */}
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Documentation</h1>
+          <h1 id="page-title" className="hero-title">Documentation</h1>
           <p className="hero-subtitle">
             Learn how to use AionScript v1.0 LTF to build AI-native data systems with meaning, trust, and governance
           </p>
@@ -75,6 +76,7 @@ const Docs = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

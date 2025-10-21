@@ -1,12 +1,19 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Licensing = () => {
   return (
     <div>
+      <SEO 
+        title="Licensing - Open Spec, MIT Tools, Proprietary Services"
+        description="AionScript licensing overview: Open specification (AOSL-1.0), open-source tools under MIT, and proprietary engine/services."
+        canonicalUrl="https://aionscript.com/licensing"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Licensing</h1>
+          <h1 id="page-title" className="hero-title">Licensing</h1>
           <p className="hero-subtitle">
             Open specifications, MIT tools, and proprietary services
           </p>
@@ -17,6 +24,15 @@ const Licensing = () => {
         <section className="about">
           <div className="about-content">
             <div className="about-text">
+              <h3>Summary</h3>
+              <div style={{backgroundColor: '#f8f9fa', padding: '1rem', borderRadius: '8px', marginTop: '2rem', fontSize: '1rem', lineHeight: '1.6', color: '#444'}}>
+                <ul style={{marginBottom: 0}}>
+                  <li style={{marginBottom: '0.5rem', fontSize: '1rem'}}><strong>Language Specification:</strong> AOSL-1.0 (Open)</li>
+                  <li style={{marginBottom: '0.5rem', fontSize: '1rem'}}><strong>Developer Tools:</strong> MIT License (Open Source)</li>
+                  <li style={{fontSize: '1rem'}}><strong>Engine & Cloud Services:</strong> Proprietary</li>
+                </ul>
+              </div>
+
               <h2>1. AionScript Language Specification (.aion and .sJson)</h2>
               <p>
                 The AionScript language and specification—including the .aion syntax and .sJson structured JSON format—are licensed under the <strong>AionScript Open Specification License v1.0 (AOSL-1.0)</strong>.
@@ -56,19 +72,13 @@ const Licensing = () => {
                 Source code for these systems is not publicly licensed and may not be reverse-engineered or redistributed.
               </p>
 
-              <h3>Summary</h3>
-              <div style={{backgroundColor: '#f8f9fa', padding: '1rem', borderRadius: '8px', marginTop: '2rem', fontSize: '1rem', lineHeight: '1.6', color: '#444'}}>
-                <ul style={{marginBottom: 0}}>
-                  <li style={{marginBottom: '0.5rem', fontSize: '1rem'}}><strong>Language Specification:</strong> AOSL-1.0 (Open)</li>
-                  <li style={{marginBottom: '0.5rem', fontSize: '1rem'}}><strong>Developer Tools:</strong> MIT License (Open Source)</li>
-                  <li style={{fontSize: '1rem'}}><strong>Engine & Cloud Services:</strong> Proprietary</li>
-                </ul>
-              </div>
+              
             </div>
             <AboutVisual />
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

@@ -10,9 +10,10 @@ const Aion = () => {
         description=".aion is a human-readable language for intelligent data. Author structured data with semantics, context, and intent. Compile to .sJson."
         canonicalUrl="https://aionscript.com/aion"
       />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">The Aion Language (.aion)</h1>
+          <h1 id="page-title" className="hero-title">The Aion Language (.aion)</h1>
           <p className="hero-subtitle">
             Human-readable authoring with meaning built-in. Author with intent; compile to deterministic .sJson.
           </p>
@@ -23,6 +24,22 @@ const Aion = () => {
         <section className="about">
           <div className="about-content">
             <div className="about-text">
+              <h3>Quick Example</h3>
+              <div className="code-block-container">
+                <pre className="code">
+{`{A}
+title: "Marketing plan"
+owner @role: "PM"
+audience @role: ["Design","Growth"]
+goals: +["Increase signups","Clarify value"]
+@directive(generate): brief for Q1 launch
+{/A}`}
+                </pre>
+              </div>
+              <p>
+                In Aion, @role and @directive are explicit semantics - simple to read, powerful for AI.
+              </p>
+
               <h2>Authoring Principles</h2>
               <ul>
                 <li><strong>Semantics First:</strong> Meaning should be explicit, not implied</li>
@@ -40,22 +57,6 @@ const Aion = () => {
                 <li><strong>Interoperable:</strong> Transforms to JSON while preserving semantics</li>
                 <li><strong>Safe by Design:</strong> Strong typing and validated directives reduce runtime surprises</li>
               </ul>
-              
-              <h3>Quick Example</h3>
-              <div className="code-block-container">
-                <pre className="code">
-{`{A}
-title: "Marketing plan"
-owner @role: "PM"
-audience @role: ["Design","Growth"]
-goals: +["Increase signups","Clarify value"]
-@directive(generate): brief for Q1 launch
-{/A}`}
-                </pre>
-              </div>
-              <p>
-                In Aion, @role and @directive are explicit semantics — simple to read, powerful for AI.
-              </p>
               
               <h3>Smart Semantics</h3>
               <p>.aion adds meaning that compiles to .sJson:</p>
@@ -87,6 +88,7 @@ goals: +["Increase signups","Clarify value"]
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

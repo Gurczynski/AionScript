@@ -11,9 +11,10 @@ const SJson = () => {
         description=".sJson is the output of AionScript: standard JSON with semantics, evidence, trust, and governance. Fully AI-ready and verifiable."
         canonicalUrl="https://aionscript.com/sjson"
       />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Structured JSON (.sJson)</h1>
+          <h1 id="page-title" className="hero-title">Structured JSON (.sJson)</h1>
           <p className="hero-subtitle">
             Canonical JSON with meaning, trust, and governance built-in. Works wherever JSON works.
           </p>
@@ -31,6 +32,15 @@ const SJson = () => {
                 information. Because it's still JSON, it works with any existing JSON-compatible system.
               </p>
               
+              <h3>Why .sJson Works</h3>
+              <ul>
+                <li><strong>JSON Compatible:</strong> Drop-in replacement for existing JSON workflows</li>
+                <li><strong>Self-Describing:</strong> Data carries its own meaning and context</li>
+                <li><strong>Verifiable:</strong> Canonical serialization enables consistent hashing</li>
+                <li><strong>AI-Ready:</strong> Confidence and evidence fields improve model accuracy</li>
+                <li><strong>Governable:</strong> Policy metadata travels with the data</li>
+              </ul>
+
               <h3>Universal Meta Layer</h3>
               <p>Every .sJson object can include these standardized fields:</p>
               <ul>
@@ -40,15 +50,6 @@ const SJson = () => {
                 <li><strong>@timestamp, @source:</strong> Provenance and freshness tracking</li>
                 <li><strong>@classification, @consent:</strong> Built-in governance and policy</li>
                 <li><strong>@embedding:</strong> Vector representations for semantic search</li>
-              </ul>
-              
-              <h3>Why .sJson Works</h3>
-              <ul>
-                <li><strong>JSON Compatible:</strong> Drop-in replacement for existing JSON workflows</li>
-                <li><strong>Self-Describing:</strong> Data carries its own meaning and context</li>
-                <li><strong>Verifiable:</strong> Canonical serialization enables consistent hashing</li>
-                <li><strong>AI-Ready:</strong> Confidence and evidence fields improve model accuracy</li>
-                <li><strong>Governable:</strong> Policy metadata travels with the data</li>
               </ul>
 
               <h3>Example Structure</h3>
@@ -61,7 +62,7 @@ const SJson = () => {
   "name": "John Doe",
   "email": "john@example.com",
   "@hash": "sha256:abc123...",
-  "@timestamp": "2024-01-01T00:00:00Z",
+  "@timestamp": "2025-01-01T00:00:00Z",
   "@classification": "internal",
   "@consent": "analytics_approved"
 }`}
@@ -93,6 +94,7 @@ const SJson = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

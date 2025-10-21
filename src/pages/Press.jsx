@@ -10,9 +10,10 @@ const Press = () => {
         description="Explore AionScript's origin, impact, and strategic vision. Logos, product facts, and quotes for media coverage."
         canonicalUrl="https://aionscript.com/press"
       />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Press & Media</h1>
+          <h1 id="page-title" className="hero-title">Press & Media</h1>
           <p className="hero-subtitle">
             AionScript v1.0 LTF - The Language of Intelligent Data with meaning, trust, and governance built-in
           </p>
@@ -41,15 +42,6 @@ const Press = () => {
                 <li><strong>GitHub:</strong> github.com/aionscript</li>
               </ul>
               
-              <h3>Why It's Brilliant (TL;DR)</h3>
-              <ul>
-                <li><strong>Technical:</strong> Solves prompt brittleness by embedding context and confidence directly in data</li>
-                <li><strong>AI:</strong> Reduces hallucinations and improves model accuracy with self-describing data</li>
-                <li><strong>Business:</strong> Eliminates custom parsing logic and reduces integration overhead</li>
-                <li><strong>Philosophical:</strong> Data should carry its own meaning, not require external interpretation</li>
-                <li><strong>Strategic:</strong> Open standard that organizations can adopt without vendor lock-in</li>
-              </ul>
-              
               <h3>The Problem AionScript Solves</h3>
               <p>
                 Most AI systems today work with "dumb data" - flat JSON that lacks context, confidence, 
@@ -64,6 +56,15 @@ const Press = () => {
                 <li><strong>Compile</strong> to .sJson - canonical JSON with embedded semantics and optional signatures</li>
                 <li><strong>Use everywhere</strong> - APIs, databases, ML pipelines, governance tools</li>
               </ol>
+
+              <h3>Why It's Brilliant (TL;DR)</h3>
+              <ul>
+                <li><strong>Technical:</strong> Solves prompt brittleness by embedding context and confidence directly in data</li>
+                <li><strong>AI:</strong> Reduces hallucinations and improves model accuracy with self-describing data</li>
+                <li><strong>Business:</strong> Eliminates custom parsing logic and reduces integration overhead</li>
+                <li><strong>Philosophical:</strong> Data should carry its own meaning, not require external interpretation</li>
+                <li><strong>Strategic:</strong> Open standard that organizations can adopt without vendor lock-in</li>
+              </ul>
               
               <h3>Press Kit</h3>
               <ul>
@@ -101,6 +102,7 @@ const Press = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

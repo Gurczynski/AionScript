@@ -11,9 +11,10 @@ const Beta = () => {
         description="Apply for early access to AionScript v1.0 LTF. Help shape the future of intelligent data by working directly with our team and tools."
         canonicalUrl="https://aionscript.com/beta"
       />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Early Access Program</h1>
+          <h1 id="page-title" className="hero-title">Early Access Program</h1>
           <p className="hero-subtitle">
             Join the AionScript v1.0 LTF early access program and help shape the future of intelligent data
           </p>
@@ -54,6 +55,7 @@ const Beta = () => {
       </div>
 
       <ContactForm />
+      </article>
     </div>
   )
 }

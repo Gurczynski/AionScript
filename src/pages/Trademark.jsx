@@ -1,12 +1,19 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Trademark = () => {
   return (
     <div>
+      <SEO 
+        title="Trademark Policy - AionScript"
+        description="Guidelines for using AionScript trademarks and branding, including permitted and restricted uses and permission requests."
+        canonicalUrl="https://aionscript.com/trademark"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Trademark Policy</h1>
+          <h1 id="page-title" className="hero-title">Trademark Policy</h1>
           <p className="hero-subtitle">
             Guidelines for using AionScript™ trademarks and branding
           </p>
@@ -63,6 +70,7 @@ const Trademark = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

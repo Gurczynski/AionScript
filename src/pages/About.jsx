@@ -10,9 +10,10 @@ const About = () => {
         description="AionScript was created to fix flat, untrustworthy JSON. Our mission: make intelligent, self-describing data the default for modern AI systems."
         canonicalUrl="https://aionscript.com/about"
       />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">About AionScript</h1>
+          <h1 id="page-title" className="hero-title">About AionScript</h1>
           <p className="hero-subtitle">
             The origin story and vision behind the Language of Intelligent Data
           </p>
@@ -92,6 +93,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

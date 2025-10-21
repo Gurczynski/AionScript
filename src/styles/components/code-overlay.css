@@ -97,6 +97,7 @@ pre.code {
 .code-block-container {
   position: relative;
   margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 .copy-button {

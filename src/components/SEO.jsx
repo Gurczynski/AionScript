@@ -58,6 +58,7 @@ const SEO = ({
       }
     }
 
+    updateOGTag('og:type', 'website')
     updateOGTag('og:title', ogTitle || title)
     updateOGTag('og:description', ogDescription || description)
     updateOGTag('og:image', ogImage)
@@ -76,6 +77,7 @@ const SEO = ({
       }
     }
 
+    updateTwitterTag('twitter:card', 'summary_large_image')
     updateTwitterTag('twitter:title', twitterTitle || title)
     updateTwitterTag('twitter:description', twitterDescription || description)
     updateTwitterTag('twitter:image', twitterImage)

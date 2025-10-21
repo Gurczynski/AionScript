@@ -1,11 +1,18 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 const Terms = () => {
   return (
     <div>
+      <SEO 
+        title="Terms of Service - AionScript"
+        description="Legal terms and conditions for using AionScript software, specifications, and services."
+        canonicalUrl="https://aionscript.com/terms"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Terms of Service</h1>
+          <h1 id="page-title" className="hero-title">Terms of Service</h1>
           <p className="hero-subtitle">
             Legal terms and conditions for using AionScript
           </p>
@@ -14,7 +21,7 @@ const Terms = () => {
 
       <div className="container">
         <section className="about">
-          <div className="about-content">
+          <div className="about-content about-content--single">
             <div className="about-text">
               <p><strong>Last updated:</strong> October 19, 2025</p>
               
@@ -140,6 +147,7 @@ const Terms = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

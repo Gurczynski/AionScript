@@ -1,12 +1,19 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Patent = () => {
   return (
     <div>
+      <SEO 
+        title="Patent Information - AionScript Technology"
+        description="Patent status and intellectual property information related to AionScript systems, methods, and innovations."
+        canonicalUrl="https://aionscript.com/patent"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Patent Information</h1>
+          <h1 id="page-title" className="hero-title">Patent Information</h1>
           <p className="hero-subtitle">
             Intellectual property and patent status for AionScript technology
           </p>
@@ -27,6 +34,15 @@ const Patent = () => {
                 <li><strong>Contextual runtime models</strong> for intelligent structured data</li>
                 <li><strong>Systems enabling trust and provenance</strong> in human-authored schema</li>
               </ul>
+
+              <h2>Innovation and Open Standards</h2>
+              <p>
+                While we protect our core innovations through patents, AionScript remains committed to open standards and community development. Our open-source tools and specifications are designed to foster innovation while respecting intellectual property rights.
+              </p>
+              
+              <p>
+                For questions about how patents may affect your use of AionScript technology, or to discuss licensing arrangements, please reach out to our legal team.
+              </p>
 
               <h2>Compliance and Integration</h2>
               <p>
@@ -53,19 +69,13 @@ const Patent = () => {
                 </p>
               </div>
 
-              <h2>Innovation and Open Standards</h2>
-              <p>
-                While we protect our core innovations through patents, AionScript remains committed to open standards and community development. Our open-source tools and specifications are designed to foster innovation while respecting intellectual property rights.
-              </p>
               
-              <p>
-                For questions about how patents may affect your use of AionScript technology, or to discuss licensing arrangements, please reach out to our legal team.
-              </p>
             </div>
             <AboutVisual />
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

@@ -53,7 +53,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <div className="footer-copyright">
-          <p>&copy; 2024 AionScript. All rights reserved.</p>
+          <p>&copy; 2025 AionScript. All rights reserved.</p>
           <p className="footer-patent">Patent pending • Open specification • v1.0 LTF</p>
         </div>
         <div className="footer-social">

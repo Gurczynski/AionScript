@@ -1,12 +1,19 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const Privacy = () => {
   return (
     <div>
+      <SEO 
+        title="Privacy Policy - AionScript"
+        description="How AionScript collects, uses, and protects your information, with a local-first and privacy-first approach."
+        canonicalUrl="https://aionscript.com/privacy"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">Privacy Policy</h1>
+          <h1 id="page-title" className="hero-title">Privacy Policy</h1>
           <p className="hero-subtitle">
             How we handle your data
           </p>
@@ -15,7 +22,7 @@ const Privacy = () => {
 
       <div className="container">
         <section className="about">
-          <div className="about-content">
+          <div className="about-content about-content--single">
             <div className="about-text">
               <p><strong>Last updated:</strong> October 19, 2025</p>
               
@@ -133,6 +140,7 @@ const Privacy = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }

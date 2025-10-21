@@ -1,12 +1,19 @@
 import React from 'react'
 import AboutVisual from '../components/AboutVisual'
+import SEO from '../components/SEO'
 
 const History = () => {
   return (
     <div>
+      <SEO 
+        title="History of AionScript - Origins and Evolution"
+        description="Discover the story behind AionScript: why it was created and how it evolved to solve the 'dumb data' problem in AI systems."
+        canonicalUrl="https://aionscript.com/history"
+      />
+      <article aria-labelledby="page-title">
       <section className="hero hero--mini">
         <div className="hero-content">
-          <h1 className="hero-title">History</h1>
+          <h1 id="page-title" className="hero-title">History</h1>
           <p className="hero-subtitle">
             The story behind AionScript
           </p>
@@ -28,6 +35,7 @@ const History = () => {
           </div>
         </section>
       </div>
+      </article>
     </div>
   )
 }
