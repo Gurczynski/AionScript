@@ -1,9 +1,14 @@
 /* Responsive Styles */
 
-@media (max-width: 768px) {
-  /* Hide GitHub and Get Started buttons on mobile */
-  .nav-actions {
+@media (max-width: 900px) {
+  /* Hide GitHub and Get Started buttons on mobile but keep the hamburger menu */
+  .nav-actions .btn {
     display: none;
+  }
+  
+  /* Ensure hamburger menu is visible */
+  .nav-actions .nav-toggle {
+    display: block;
   }
   .container {
     padding: 0 var(--space-md);
