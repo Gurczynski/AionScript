@@ -164,7 +164,7 @@
     flex-direction: column;
     padding: var(--space-md) var(--space-lg);
     text-align: center;
-    max-height: 500px;
+    max-height: 450px;
     min-height: auto !important;
     height: auto !important;
   }
