@@ -10,6 +10,42 @@
   .nav-actions .nav-toggle {
     display: block;
   }
+  
+  /* Improve text alignment for better readability on mobile */
+  :not(footer) p,
+  :not(footer) li,
+  :not(footer) ul,
+  :not(footer) ol,
+  :not(footer) dd,
+  :not(footer) dt,
+  :not(footer) blockquote,
+  h1:not(.hero-title):not(.hero h1 *):not([class*="hero"] h1):not(footer h1),
+  h2:not(.hero-subtitle):not(.hero h2 *):not([class*="hero"] h2):not(footer h2),
+  h3:not(.hero h3 *):not([class*="hero"] h3):not(footer h3),
+  h4:not(.hero h4 *):not([class*="hero"] h4):not(footer h4),
+  h5:not(.hero h5 *):not([class*="hero"] h5):not(footer h5),
+  h6:not(.hero h6 *):not([class*="hero"] h6):not(footer h6) {
+    text-align: left !important;
+  }
+  
+  /* Ensure code blocks are properly formatted and scrollable */
+  pre, code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  /* Fix list item alignment */
+  ul, ol {
+    padding-left: 1.5em !important;
+  }
+  
+  /* Ensure proper spacing for nested lists */
+  li > ul, li > ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
   .container {
     padding: 0 var(--space-md);
   }
