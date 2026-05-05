@@ -59,6 +59,7 @@ const Navbar = () => {
           <Link to="/aion" className={isActive('/aion')}>.aion</Link>
           <Link to="/sjson" className={isActive('/sjson')}>.sJson</Link>
           <Link to="/adoption" className={isActive('/adoption')}>Adopt</Link>
+          <Link to="/pricing" className={isActive('/pricing')}>Pricing</Link>
           <div className={`dropdown ${dropdownOpen ? 'open' : ''}`}>
             <button 
               className={`dropdown-toggle ${isDropdownActive() ? 'active' : ''}`}
@@ -105,7 +106,8 @@ const Navbar = () => {
                        A3.37 3.37 0 0 0 9 18.13V22"/>
             </svg>
           </a>
-          <Link to="/beta" className="btn btn-primary">Get Started</Link>
+          <Link to="/pricing" className="btn btn-secondary">Pricing</Link>
+          <Link to="/signup" className="btn btn-primary">Get Started</Link>
           <button 
             className="nav-toggle"
             onClick={toggleNav}
