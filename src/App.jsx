@@ -4,9 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import useReducedMotion from './hooks/useReducedMotion'
 import Home from './pages/Home'
-// Pricing and Signup - create these with Lovable or use the ones I provided
-// import Pricing from './pages/Pricing'  // Uncomment if you create this page
-// import Signup from './pages/Signup'    // Uncomment if you create this page
+import Pricing from './pages/Pricing'
+import Signup from './pages/Signup'
 import Docs from './pages/Docs'
 import SJson from './pages/SJson'
 import Aion from './pages/Aion'
@@ -30,9 +29,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Uncomment these when you create the pages with Lovable */}
-          {/* <Route path="/pricing" element={<Pricing />} /> */}
-          {/* <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/sjson" element={<SJson />} />
           <Route path="/aion" element={<Aion />} />
